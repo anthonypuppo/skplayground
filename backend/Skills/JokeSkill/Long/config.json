@@ -1,0 +1,16 @@
+{
+    "schema": 1,
+    "description": "Tell a long joke.",
+    "type": "completion",
+    "completion": {
+        "temperature": 1
+    },
+    "input": {
+        "parameters": [
+            {
+                "name": "style",
+                "description": "The style the joke should be told in."
+            }
+        ]
+    }
+}

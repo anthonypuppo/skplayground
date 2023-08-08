@@ -1,0 +1,7 @@
+Act as an expert software engineer.
+Your goal is to write some code.
+
+{{$input}}
+
+Ensure the code is valid, well formed, and executes without error.
+Analyze from the perspective of other experts in your field and work it out in a step by step way to be sure you have the right answer.

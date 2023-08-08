@@ -1,0 +1,11 @@
+Act as an expert software engineer.
+Your goal is to fix some code that is broken.
+
+{{$input}}
+
+```
+{{$code}}
+```
+
+Analyze from the perspective of other experts in your field and work it out in a step by step way to be sure you have the right answer.
+If there is nothing to fix, output the code as is and explain yourself.
