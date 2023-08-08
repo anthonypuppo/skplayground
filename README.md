@@ -32,6 +32,11 @@ The following core technologies are used:
 - Next.js
 - .NET 7
 
+## Roadmap
+
+- Stream messages from the server (pending native streaming support for functions in SK)
+- Configure AI options including providers (OpenAI, Azure, etc.) as well as models (GPT-3.5, GPT-4, etc.)
+
 ## Contributing
 
 SKPlayground is an open-source project, and contributions are welcome.
