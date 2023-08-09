@@ -15,10 +15,14 @@ using SKPlayground.Api.Options;
 using SKPlayground.Api.Telemetry;
 
 var builder = WebApplication.CreateBuilder(args);
+var azureOptions = new AzureOptions();
 var corsOptions = new CorsOptions();
 var rateLimitOptions = new RateLimitOptions();
 var semanticKernelOptions = new SemanticKernelOptions();
 
+builder.Configuration
+    .GetSection(AzureOptions.Azure)
+    .Bind(azureOptions);
 builder.Configuration
     .GetSection(CorsOptions.Cors)
     .Bind(corsOptions);
@@ -92,13 +96,18 @@ builder.Services.AddRateLimiter((limiterOptions) =>
     };
 });
 
-builder.Services
+var signalRBuilder = builder.Services
     .AddSignalR()
     .AddJsonProtocol((options) =>
     {
         options.PayloadSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
         options.PayloadSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));
     });
+
+if (azureOptions.SignalR.ConnectionString is not null)
+{
+    signalRBuilder.AddAzureSignalR();
+}
 
 builder.Services.AddSingleton<IMemoryStore, VolatileMemoryStore>();
 
@@ -108,6 +117,7 @@ builder.Services.Configure<ForwardedHeadersOptions>((options) =>
     options.KnownNetworks.Clear();
     options.KnownProxies.Clear();
 });
+builder.Services.Configure<AzureOptions>(builder.Configuration.GetSection(AzureOptions.Azure));
 builder.Services.Configure<SemanticKernelOptions>(builder.Configuration.GetSection(SemanticKernelOptions.SemanticKernel));
 builder.Services.Configure<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme, (options) =>
 {
