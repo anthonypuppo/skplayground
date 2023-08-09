@@ -1,6 +1,6 @@
 'use client'
 
-import { useMsal } from '@azure/msal-react'
+import { useIsAuthenticated, useMsal } from '@azure/msal-react'
 import { env } from '@/env/client'
 import { useAppInsightsContext } from '@microsoft/applicationinsights-react-js'
 import {
@@ -39,6 +39,7 @@ export function SemanticKernelHubProvider({
 }: SemanticKernelHubProviderProps) {
   const appInsights = useAppInsightsContext()
   const { instance: msalInstance } = useMsal()
+  const isAuthenticated = useIsAuthenticated()
 
   const getAccessToken = async () => {
     try {
@@ -87,49 +88,51 @@ export function SemanticKernelHubProvider({
     )
 
   useEffect(() => {
-    if (hubConnection.state == HubConnectionState.Disconnected) {
-      hubConnection.onreconnecting(() => {
-        useStore.getState().notifications.pushNotification({
-          type: NotificationType.Info,
-          utcSeconds: Date.now() / 1000,
-          title: 'SignalR',
-          message: 'Reconnecting...'
+    if (isAuthenticated) {
+      if (hubConnection.state == HubConnectionState.Disconnected) {
+        hubConnection.onreconnecting(() => {
+          useStore.getState().notifications.pushNotification({
+            type: NotificationType.Info,
+            utcSeconds: Date.now() / 1000,
+            title: 'SignalR',
+            message: 'Reconnecting...'
+          })
         })
-      })
-      hubConnection.onreconnected(() => {
-        useStore.getState().notifications.pushNotification({
-          type: NotificationType.Success,
-          utcSeconds: Date.now() / 1000,
-          title: 'SignalR',
-          message: 'Connection re-established.'
+        hubConnection.onreconnected(() => {
+          useStore.getState().notifications.pushNotification({
+            type: NotificationType.Success,
+            utcSeconds: Date.now() / 1000,
+            title: 'SignalR',
+            message: 'Connection re-established.'
+          })
         })
-      })
-      hubConnection.onclose(() => {
-        useStore.getState().notifications.pushNotification({
-          type: NotificationType.Error,
-          utcSeconds: Date.now() / 1000,
-          title: 'SignalR',
-          message: 'Connection closed. Please refresh the page to reconnect.'
+        hubConnection.onclose(() => {
+          useStore.getState().notifications.pushNotification({
+            type: NotificationType.Error,
+            utcSeconds: Date.now() / 1000,
+            title: 'SignalR',
+            message: 'Connection closed. Please refresh the page to reconnect.'
+          })
         })
-      })
-      hubConnection.on('ReceiveNotification', notification => {
-        useStore.getState().notifications.pushNotification(notification)
-      })
-      hubConnection.start().catch(err => {
-        if (err instanceof Error) {
-          appInsights.trackException({ error: err })
-        }
+        hubConnection.on('ReceiveNotification', notification => {
+          useStore.getState().notifications.pushNotification(notification)
+        })
+        hubConnection.start().catch(err => {
+          if (err instanceof Error) {
+            appInsights.trackException({ error: err })
+          }
 
-        useStore.getState().notifications.pushNotification({
-          type: NotificationType.Error,
-          utcSeconds: Date.now() / 1000,
-          title: 'SignalR',
-          message:
-            'Unable to start the connection. Please refresh the page to try again.'
+          useStore.getState().notifications.pushNotification({
+            type: NotificationType.Error,
+            utcSeconds: Date.now() / 1000,
+            title: 'SignalR',
+            message:
+              'Unable to start the connection. Please refresh the page to try again.'
+          })
         })
-      })
+      }
     }
-  })
+  }, [isAuthenticated])
 
   return (
     <SemanticKernelHubContext.Provider value={{ invokeFunction }}>

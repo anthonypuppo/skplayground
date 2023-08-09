@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 import { fontSans } from '@/lib/fonts'
-import { DefaultProviders } from '@/components/providers/default-providers'
+import { Providers } from '@/components/providers'
 import { WebVitals } from '@/components/web-vitals'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
@@ -50,7 +50,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSans.variable
         )}
       >
-        <DefaultProviders>
+        <Providers>
           <div className="relative flex min-h-screen flex-col">
             <SiteHeader />
             <div className="flex-1">
@@ -60,7 +60,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </div>
           <Toaster />
           <WebVitals />
-        </DefaultProviders>
+        </Providers>
       </body>
     </html>
   )

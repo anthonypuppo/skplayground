@@ -34,7 +34,8 @@ export function MainNav() {
               e.preventDefault()
               e.stopPropagation()
               msalInstance.loginRedirect({
-                ...loginRequest
+                ...loginRequest,
+                redirectStartPage: '/playground'
               })
             }
           }}
