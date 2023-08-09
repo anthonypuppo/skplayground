@@ -26,6 +26,15 @@ jobs:
           npm install
           npm run build
           cd ..
+        env:
+          NEXT_PUBLIC_APP_URL: ${{ env.NEXT_PUBLIC_APP_URL }}
+          NEXT_PUBLIC_APP_INSIGHTS_CONNECTION_STRING: ${{ env.NEXT_PUBLIC_APP_INSIGHTS_CONNECTION_STRING }}
+          NEXT_PUBLIC_AUTH_CLIENT_ID: ${{ env.NEXT_PUBLIC_AUTH_CLIENT_ID }}
+          NEXT_PUBLIC_AUTH_AUTHORITY: ${{ env.NEXT_PUBLIC_AUTH_AUTHORITY }}
+          NEXT_PUBLIC_AUTH_API_CLIENT_ID: ${{ env.NEXT_PUBLIC_AUTH_API_CLIENT_ID }}
+          NEXT_PUBLIC_API_URL: ${{ env.NEXT_PUBLIC_API_URL }}
+          NEXT_PUBLIC_API_VERSION: ${{ env.NEXT_PUBLIC_API_VERSION }}
+          SKPLAYGROUND_GITHUB_ACCESS_TOKEN: ${{ secrets.SKPLAYGROUND_GITHUB_ACCESS_TOKEN }}
 
       - name: Copy files for deployment
         run: |
