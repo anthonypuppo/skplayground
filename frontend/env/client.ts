@@ -6,7 +6,6 @@ export const env = createEnv({
     NEXT_PUBLIC_APP_URL: z.string().url(),
     NEXT_PUBLIC_APP_INSIGHTS_CONNECTION_STRING: z.string().optional(),
     NEXT_PUBLIC_AUTH_CLIENT_ID: z.string().nonempty(),
-    NEXT_PUBLIC_AUTH_AUTHORITY: z.string().url(),
     NEXT_PUBLIC_AUTH_API_CLIENT_ID: z.string().nonempty(),
     NEXT_PUBLIC_API_URL: z.string().url(),
     NEXT_PUBLIC_API_VERSION: z.string().nonempty()
@@ -16,7 +15,6 @@ export const env = createEnv({
     NEXT_PUBLIC_APP_INSIGHTS_CONNECTION_STRING:
       process.env.NEXT_PUBLIC_APP_INSIGHTS_CONNECTION_STRING,
     NEXT_PUBLIC_AUTH_CLIENT_ID: process.env.NEXT_PUBLIC_AUTH_CLIENT_ID,
-    NEXT_PUBLIC_AUTH_AUTHORITY: process.env.NEXT_PUBLIC_AUTH_AUTHORITY,
     NEXT_PUBLIC_AUTH_API_CLIENT_ID: process.env.NEXT_PUBLIC_AUTH_API_CLIENT_ID,
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
     NEXT_PUBLIC_API_VERSION: process.env.NEXT_PUBLIC_API_VERSION

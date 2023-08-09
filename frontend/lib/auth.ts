@@ -8,7 +8,6 @@ import {
 export const msalConfig: Configuration = {
   auth: {
     clientId: env.NEXT_PUBLIC_AUTH_CLIENT_ID,
-    authority: env.NEXT_PUBLIC_AUTH_AUTHORITY,
     redirectUri: '/',
     postLogoutRedirectUri: '/'
   }
