@@ -8,7 +8,7 @@ import { IconGitHub } from '@/components/ui/icons'
 async function getGitHubStars() {
   try {
     const octokit = new Octokit({
-      auth: env.GITHUB_ACCESS_TOKEN
+      auth: env.SKPLAYGROUND_GITHUB_ACCESS_TOKEN
     })
     const repo = await octokit.rest.repos.get({
       owner: siteConfig.gitHubOwner,
