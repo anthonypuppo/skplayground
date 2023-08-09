@@ -17,7 +17,7 @@ Welcome to the SKPlayground, your interactive playground to experiment with Micr
 - **Extendability:** Can serve as an excellent starting point or inspiration for your own projects involving AI.
 
 > **Note**
-> An online, fully hosted demo environment will be available shortly!
+> An online demo environment is availabe at [skplayground.dev](https://skplayground.dev/)
 
 ![Screenshot](/screenshots/example-prompt.png)
 
