@@ -77,17 +77,21 @@ export function FunctionSelector() {
                   {peekedFunction?.description}
                 </div>
               </div>
-              {peekedFunction?.parameters?.length && (
-                <div className="flex flex-row flex-wrap space-x-1">
-                  {peekedFunction.parameters.map(param => (
-                    <Badge
-                      key={param.name}
-                      variant="secondary"
-                      className="mt-2"
-                    >
-                      {param.name}
-                    </Badge>
-                  ))}
+              {!!peekedFunction?.parameters?.filter(
+                x => x.name.toLowerCase() != 'input'
+              ).length && (
+                <div className="flex flex-row flex-wrap">
+                  {peekedFunction.parameters
+                    .filter(x => x.name.toLowerCase() != 'input')
+                    .map(param => (
+                      <Badge
+                        key={param.name}
+                        variant="secondary"
+                        className="mr-1 mt-2"
+                      >
+                        {param.name}
+                      </Badge>
+                    ))}
                 </div>
               )}
             </HoverCardContent>

@@ -70,7 +70,8 @@ export function InputVariables() {
             selectedFunction &&
             !!selectedFunction.parameters?.filter(
               a =>
-                a.name != 'input' && !inputVariables.find(b => b.key == a.name)
+                a.name.toLowerCase() != 'input' &&
+                !inputVariables.find(b => b.key == a.name)
             ).length && (
               <>
                 <Separator orientation="vertical" className="h-4" />
@@ -98,7 +99,7 @@ export function InputVariables() {
                       selectedFunction.parameters
                         .filter(
                           a =>
-                            a.name != 'input' &&
+                            a.name.toLowerCase() != 'input' &&
                             !inputVariables.find(b => b.key == a.name)
                         )
                         .map(parameter => (
