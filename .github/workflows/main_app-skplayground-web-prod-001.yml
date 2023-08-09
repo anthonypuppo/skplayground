@@ -20,17 +20,25 @@ jobs:
         with:
           node-version: "18.x"
 
-      - name: npm install, build, and test
+      - name: npm install and build
         run: |
+          cd frontend
           npm install
-          npm run build --if-present
-          npm run test --if-present
+          npm run build
+          cd ..
+
+      - name: Copy files for deployment
+        run: |
+          mkdir -p frontend/.next/standalone/.next/static
+          mkdir -p frontend/.next/standalone/public
+          cp -r frontend/.next/static/* frontend/.next/standalone/.next/static/
+          cp -r frontend/public/* frontend/.next/standalone/public/
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
-          name: node-app
-          path: .
+          name: app
+          path: ./frontend/.next/standalone
 
   deploy:
     runs-on: ubuntu-latest
@@ -43,7 +51,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
-          name: node-app
+          name: app
 
       - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
