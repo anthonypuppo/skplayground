@@ -25,22 +25,23 @@ Welcome to the SKPlayground, your interactive playground to experiment with Micr
 
 ## Architecture
 
-The two main components of this app are found in the `frontend` and `backend` folders. See their respective README files for more information.
+This app is composed of a dedicated `frontend` (UI/UX) and `backend` (business logic).
 
-The following core technologies are used:
+### Frontend
 
-- Next.js
-- .NET 7
+- [Next.js](https://github.com/vercel/next.js) App Router
+- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) CSS
+- [Radix Primitives](https://github.com/radix-ui/primitives) headless components
+- [shadcn/ui](https://github.com/shadcn-ui/ui) default styling
+- [Lucide](https://github.com/vercel/next.js) icon set
+
+### Backend
+
+- [.NET 7](https://dotnet.microsoft.com) code framework
+- [ASP.NET Core](https://dotnet.microsoft.com/apps/aspnet/apis) minimal API
+- [SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr) real-time communication
 
 ## Roadmap
 
 - Stream messages from the server (pending native streaming support for functions in SK)
 - Configure AI options including providers (OpenAI, Azure, etc.) as well as models (GPT-3.5, GPT-4, etc.)
-
-## Contributing
-
-SKPlayground is an open-source project, and contributions are welcome.
-
-## Support
-
-If you have any problem or suggestion please open an issue [here](https://github.com/anthonypuppo/skplayground/issues).
