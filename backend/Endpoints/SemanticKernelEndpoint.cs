@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.SkillDefinition;
+using Microsoft.SemanticKernel.Skills.Core;
 using SKPlayground.Api.Endpoints.Models;
 using SKPlayground.Api.Extensions;
 
@@ -29,19 +30,22 @@ public static class SemanticKernelEndpoint
             Skills = functions.Select((skill) => new SemanticKernelSkill()
             {
                 Name = skill.Key,
-                Functions = skill.Value.Select((function) => new SemanticKernelFunction()
-                {
-                    Name = function.Name,
-                    Description = function.Description,
-                    Parameters = function.Parameters
-                        .Select((parameter) => new SemanticKernelParameter()
-                        {
-                            Name = parameter.Name,
-                            Description = parameter.Description
-                        })
-                        .ToList()
-                        .NullIfEmpty()
-                })
+                Functions = skill.Value
+                    // Temporary workaround for these functions being assigned random names at kernel initialization
+                    .Where((function) => skill.Key != nameof(ConversationSummarySkill) && !function.IsSemantic)
+                    .Select((function) => new SemanticKernelFunction()
+                    {
+                        Name = function.Name,
+                        Description = function.Description,
+                        Parameters = function.Parameters
+                            .Select((parameter) => new SemanticKernelParameter()
+                            {
+                                Name = parameter.Name,
+                                Description = parameter.Description
+                            })
+                            .ToList()
+                            .NullIfEmpty()
+                    })
             })
             .ToList()
             .NullIfEmpty()
