@@ -13,7 +13,7 @@ export function MainNav() {
   const { instance: msalInstance } = useMsal()
 
   return (
-    <div className="mr-4 flex">
+    <div className="mr-4 hidden md:flex">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         <IconLogo className="h-6 w-6 text-primary" />
         <span className="inline-block font-bold">
