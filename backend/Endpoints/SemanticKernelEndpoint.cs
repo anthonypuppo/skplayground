@@ -32,7 +32,7 @@ public static class SemanticKernelEndpoint
                 Name = skill.Key,
                 Functions = skill.Value
                     // Temporary workaround for these functions being assigned random names at kernel initialization
-                    .Where((function) => skill.Key != nameof(ConversationSummarySkill) && !function.IsSemantic)
+                    .Where((function) => skill.Key != nameof(ConversationSummarySkill) && !function.Name.ToLower().StartsWith("func"))
                     .Select((function) => new SemanticKernelFunction()
                     {
                         Name = function.Name,
