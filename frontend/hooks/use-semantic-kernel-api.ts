@@ -16,8 +16,6 @@ export const useSkillsApiQuery = (
       queryKey: [semanticKernelRouteBase, 'skills'],
       refetchOnWindowFocus: false,
       refetchOnMount: false,
-      staleTime: Infinity,
-      cacheTime: 0,
       ...queryConfig
     }
   })
