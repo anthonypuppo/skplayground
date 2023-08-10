@@ -1,6 +1,6 @@
 # SKPlayground
 
-Welcome to the SKPlayground, your interactive playground to experiment with Microsoft's Semantic Kernel Library. Dive-in to explore, learn, play and develop with AI capabilities.
+Welcome to the SKPlayground, your interactive playground to experiment with Microsoft's Semantic Kernel SDK. Dive-in to explore, learn, play and develop with AI capabilities.
 
 > **Warning**
 > This app is a work in progress and aims to mainly serve as a technical reference for building fully fledged web applications on top of Semantic Kernel. Some things may not work properly and bugs are to be expected.
