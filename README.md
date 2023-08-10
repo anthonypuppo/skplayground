@@ -30,7 +30,7 @@ This app is composed of a dedicated `frontend` (UI/UX) and `backend` (business l
 ### Frontend
 
 - [Next.js](https://github.com/vercel/next.js) App Router
-- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) CSS
+- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) CSS framework
 - [Radix Primitives](https://github.com/radix-ui/primitives) headless components
 - [shadcn/ui](https://github.com/shadcn-ui/ui) default styling
 - [Lucide](https://github.com/vercel/next.js) icon set
