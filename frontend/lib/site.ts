@@ -10,7 +10,8 @@ export const siteConfig = {
       promptTemplateSyntax:
         'https://learn.microsoft.com/semantic-kernel/prompt-engineering/prompt-template-syntax',
       bingApiKey:
-        'https://learn.microsoft.com/bing/search-apis/bing-web-search/overview'
+        'https://learn.microsoft.com/bing/search-apis/bing-web-search/overview',
+      azure: 'https://azure.microsoft.com'
     },
     gitHub: {
       profile: 'https://github.com/anthonypuppo',

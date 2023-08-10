@@ -14,6 +14,15 @@ export function SiteFooter() {
           >
             Anthony Puppo
           </a>
+          . Hosted on{' '}
+          <a
+            href={siteConfig.links.microsoft.azure}
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium underline underline-offset-4"
+          >
+            Microsoft Azure
+          </a>
           . The source code is available on{' '}
           <a
             href={siteConfig.links.gitHub.repo}
