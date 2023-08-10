@@ -4,7 +4,7 @@ import { z } from 'zod'
 export const env = createEnv({
   server: {
     NODE_ENV: z.enum(['development', 'test', 'production']),
-    SKPLAYGROUND_GITHUB_ACCESS_TOKEN: z.string().nonempty()
+    SKPLAYGROUND_GITHUB_ACCESS_TOKEN: z.string().optional()
   },
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
