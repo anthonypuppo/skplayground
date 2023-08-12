@@ -34,6 +34,8 @@ export function SubmitButton() {
         message: 'Please enter your OpenAI API key.',
         utcSeconds: utcSeconds()
       })
+
+      return
     }
 
     if (!selectedSkill || !selectedFunction) {
@@ -43,6 +45,8 @@ export function SubmitButton() {
         message: 'Please select a skill and a function.',
         utcSeconds: utcSeconds()
       })
+
+      return
     }
 
     const ask: Ask = {

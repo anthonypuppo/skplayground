@@ -84,7 +84,7 @@ public class SemanticKernelHub : Hub<ISemanticKernelHubClient>
 
             if (functionResult.ErrorOccurred)
             {
-                throw new Exception(functionResult.LastException?.Message ?? "Unknown error");
+                throw new HubException(functionResult.LastException?.Message ?? "Unknown error");
             }
 
             var output = functionResult.Result;
@@ -107,6 +107,11 @@ public class SemanticKernelHub : Hub<ISemanticKernelHubClient>
         {
             operationHolder.Telemetry.Success = false;
             localException = e;
+
+            if (e is HubException)
+            {
+                throw;
+            }
         }
         finally
         {
