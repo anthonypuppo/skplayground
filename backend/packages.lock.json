@@ -4,9 +4,9 @@
     "net7.0": {
       "Asp.Versioning.Http": {
         "type": "Direct",
-        "requested": "[7.0.0, )",
-        "resolved": "7.0.0",
-        "contentHash": "FG5grz29CYBT06xDWoM1hf+pfB7sPDYXuOOIYtVNIHduUQeWsxMfCITcDrMmZNXAf0TfcYRwCizJfOIJzWmaXA==",
+        "requested": "[7.0.1, )",
+        "resolved": "7.0.1",
+        "contentHash": "cvSrKDiszPbvSxEuC9SN9rwl1DOtXDU9TsSwNK3RzvyVhFcHdu4J0p8qaC8b8tuY/9ST4DsRN92L1HDUeTWFaQ==",
         "dependencies": {
           "Asp.Versioning.Abstractions": "7.0.0"
         }
@@ -46,9 +46,9 @@
       },
       "Microsoft.Extensions.Http.Polly": {
         "type": "Direct",
-        "requested": "[7.0.9, )",
-        "resolved": "7.0.9",
-        "contentHash": "Z5/e+XoWww3bEEoKM3B5X/7nDmj9RQZsdm5kdYKC0SCuuMtJ8m9aFKL6AZVo3hf1mfolhk60PSP/F+KoKN1fag==",
+        "requested": "[7.0.10, )",
+        "resolved": "7.0.10",
+        "contentHash": "sc2TfeuJop2RDxGiKZ8+EWbUawE8ng2XZ9DoPVNnNZuKkFnm+C04srfL7/c1LSGZnTadpZIemzGRXegEwG34iA==",
         "dependencies": {
           "Microsoft.Extensions.Http": "7.0.0",
           "Polly": "7.2.3",
@@ -57,15 +57,15 @@
       },
       "Microsoft.Identity.Web": {
         "type": "Direct",
-        "requested": "[2.13.1, )",
-        "resolved": "2.13.1",
-        "contentHash": "cukYeiiejP9nXkvs/7wdqsloRd6+hxRcO5L6+v298ya87qsZJXpmuxgbXVWR8gjpd5W6xEXl+a5pyvswxZ+6Qw==",
+        "requested": "[2.13.3, )",
+        "resolved": "2.13.3",
+        "contentHash": "dtWH55j9sGasNKhdG9awtJAa7KUqW2MhjR35K8ssdfaIRidZaq5gDavQFK+br9pa2FUvFjsbN5IMcTOVIHBbeQ==",
         "dependencies": {
           "Microsoft.Extensions.Http": "3.1.3",
-          "Microsoft.Identity.Web.Certificate": "2.13.1",
-          "Microsoft.Identity.Web.Certificateless": "2.13.1",
-          "Microsoft.Identity.Web.TokenAcquisition": "2.13.1",
-          "Microsoft.Identity.Web.TokenCache": "2.13.1",
+          "Microsoft.Identity.Web.Certificate": "2.13.3",
+          "Microsoft.Identity.Web.Certificateless": "2.13.3",
+          "Microsoft.Identity.Web.TokenAcquisition": "2.13.3",
+          "Microsoft.Identity.Web.TokenCache": "2.13.3",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.32.0",
           "Microsoft.IdentityModel.Validators": "6.32.0",
           "System.Drawing.Common": "4.7.2",
@@ -75,26 +75,26 @@
       },
       "Microsoft.SemanticKernel": {
         "type": "Direct",
-        "requested": "[0.19.230804.2-preview, )",
-        "resolved": "0.19.230804.2-preview",
-        "contentHash": "6kDg5YXTDJpFzxg3wTaAA0smf1aENB+zIxEkzNQCHt8tua+JSrM30vJeztsP5SZywFQMBpa94vaPjc9o9FCLWA==",
+        "requested": "[0.20.230821.4-preview, )",
+        "resolved": "0.20.230821.4-preview",
+        "contentHash": "qH+xSlQf5ftuJfCKkkflk5E8aHvxwX8m8o+WBfD/Mk4rtfGsnaL2CH+vNC6OKfk6M7pj8kdZ5z4JNzKObtKEWQ==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Connectors.AI.OpenAI": "0.19.230804.2-preview",
-          "Microsoft.SemanticKernel.Core": "0.19.230804.2-preview",
-          "Microsoft.SemanticKernel.Planning.ActionPlanner": "0.19.230804.2-preview",
-          "Microsoft.SemanticKernel.Planning.SequentialPlanner": "0.19.230804.2-preview",
-          "Microsoft.SemanticKernel.Skills.Core": "0.19.230804.2-preview"
+          "Microsoft.SemanticKernel.Connectors.AI.OpenAI": "0.20.230821.4-preview",
+          "Microsoft.SemanticKernel.Core": "0.20.230821.4-preview",
+          "Microsoft.SemanticKernel.Planning.ActionPlanner": "0.20.230821.4-preview",
+          "Microsoft.SemanticKernel.Planning.SequentialPlanner": "0.20.230821.4-preview",
+          "Microsoft.SemanticKernel.Skills.Core": "0.20.230821.4-preview"
         }
       },
       "Microsoft.SemanticKernel.Skills.Web": {
         "type": "Direct",
-        "requested": "[0.19.230804.2-preview, )",
-        "resolved": "0.19.230804.2-preview",
-        "contentHash": "YCplcA/dCYqihO0p6VkpPRM/PqOHMWkSFhTFWMWWgRK1aZmBrCoOPXj3TpqjLGITndA67xzTUwpo9vUb/WDWPw==",
+        "requested": "[0.20.230821.4-preview, )",
+        "resolved": "0.20.230821.4-preview",
+        "contentHash": "AAiLDtbFjwOtcSJnqubBMi7C6MEmO62OpD5/Oi87nSftrv9ZtMNJwONcrWss81vgtIqTeLRD0BZvV0JNRVC//Q==",
         "dependencies": {
           "Google.Apis.CustomSearchAPI.v1": "1.60.0.3001",
           "Microsoft.Extensions.Logging.Abstractions": "6.0.4",
-          "Microsoft.SemanticKernel.Abstractions": "0.19.230804.2-preview",
+          "Microsoft.SemanticKernel.Abstractions": "0.20.230821.4-preview",
           "System.Text.Json": "6.0.8"
         }
       },
@@ -306,16 +306,16 @@
       },
       "Microsoft.AspNetCore.Cryptography.Internal": {
         "type": "Transitive",
-        "resolved": "7.0.9",
-        "contentHash": "KLuY2N0SOEFEU0B9AgM0Idgn08mu2/4nk2biW9uG9TiYC7Pm2Z6AfxHbTV+dQnYK34lEt27A+EhwI6NzQVhvxg=="
+        "resolved": "7.0.10",
+        "contentHash": "AhNj547biaNSjp3z0DY4um1ILtadaiwYuzR1oShNMfkaRQ8cy8VVIbM458GvQi0TYg8AdP6g80bSLBMVbZmv3g=="
       },
       "Microsoft.AspNetCore.DataProtection": {
         "type": "Transitive",
-        "resolved": "7.0.9",
-        "contentHash": "qImU4TKXSBBzaojg1VlN78DsoKZTEk1J5bfPRkOjU6Q7UkSgk4gshVr8SD/1p7GGjq1AdtJ5QXMcQGiMLjRG8w==",
+        "resolved": "7.0.10",
+        "contentHash": "aeY3GFpCwE194Qe+LtUdG+Iqs44VPzrPsIOl5Ua1Si4rByPT99rLOgnldvLV5CgrBzz8W1gP3H16kYcvxmB7ZQ==",
         "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.Internal": "7.0.9",
-          "Microsoft.AspNetCore.DataProtection.Abstractions": "7.0.9",
+          "Microsoft.AspNetCore.Cryptography.Internal": "7.0.10",
+          "Microsoft.AspNetCore.DataProtection.Abstractions": "7.0.10",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "7.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "7.0.1",
@@ -325,8 +325,8 @@
       },
       "Microsoft.AspNetCore.DataProtection.Abstractions": {
         "type": "Transitive",
-        "resolved": "7.0.9",
-        "contentHash": "0vm+EqZq5NQdvOxPCTkjMgvXsSMurteBDZFjoTrPyc9UmfEr1Dij4NsMGU5cr3KelZ343VE8+4nEt5VSjXKmfg=="
+        "resolved": "7.0.10",
+        "contentHash": "TpHg6+CJ/WcXQyMajzPeKFP9sIN4GNYTHQgMZjF6Re1hRZYtuD+C+RR7rT/5psHF4obffhsktIstIMxSuo+HAQ=="
       },
       "Microsoft.AspNetCore.Hosting": {
         "type": "Transitive",
@@ -717,22 +717,22 @@
       },
       "Microsoft.Identity.Web.Certificate": {
         "type": "Transitive",
-        "resolved": "2.13.1",
-        "contentHash": "46p0Xx4hFtUTqIRYZW9VBQKgdkkigZCj1ESwFK6JK1LXJIMfQ2bKwEHjebmIdqzfFUbA4C5//OG0hGrDsbCc/Q==",
+        "resolved": "2.13.3",
+        "contentHash": "+a70TtgqDLxFH+lT3e1K+liHmHOPZRsbWVcQM3CyX4PQSqyny5yB4ahSltC4Ljrsn6jwsigqxf207L65S4spHw==",
         "dependencies": {
           "Azure.Identity": "1.3.0",
           "Azure.Security.KeyVault.Certificates": "4.1.0",
           "Azure.Security.KeyVault.Secrets": "4.1.0",
           "Microsoft.Identity.Abstractions": "4.0.0",
-          "Microsoft.Identity.Web.Certificateless": "2.13.1",
-          "Microsoft.Identity.Web.Diagnostics": "2.13.1",
+          "Microsoft.Identity.Web.Certificateless": "2.13.3",
+          "Microsoft.Identity.Web.Diagnostics": "2.13.3",
           "System.Text.Encodings.Web": "7.0.0"
         }
       },
       "Microsoft.Identity.Web.Certificateless": {
         "type": "Transitive",
-        "resolved": "2.13.1",
-        "contentHash": "HK9jRoQa2wUPQrdJExPbSDTjmN37VTDLu4oFNeFpspJoEU9keV/kmcCS9Yk9RNVVCn55VedA5lX9179j5/D3ew==",
+        "resolved": "2.13.3",
+        "contentHash": "MtRd82q+tG5EgRHRyPtxLec+SOTmvL+NbOmq+b62iOTVr5W4AZy/gzObTL3TAFJb9gdCEmq83Z8032UQ6cGj6A==",
         "dependencies": {
           "Azure.Identity": "1.3.0",
           "Microsoft.Extensions.Logging.Abstractions": "2.1.0",
@@ -742,22 +742,22 @@
       },
       "Microsoft.Identity.Web.Diagnostics": {
         "type": "Transitive",
-        "resolved": "2.13.1",
-        "contentHash": "lXQbpJ5QmVzIsWjdL+Jx7vP6IVJailwEb+ZVlmKpsNUO9SMsEaLtc5XNYDhEzsGY7KF+0IDosgCKWSQzuH0E2Q=="
+        "resolved": "2.13.3",
+        "contentHash": "1S3pngCEmzWjURvUnjPlIPzTxM7eqvtncb7EjzB67+J2Njxg7r/iSCRJDOFrt5T/r+0s1gG8O5w9HLwSTMsOtA=="
       },
       "Microsoft.Identity.Web.TokenAcquisition": {
         "type": "Transitive",
-        "resolved": "2.13.1",
-        "contentHash": "42bxydOk2uE/GgOWVhr1pZrCghoye99XK6xHqbMLmPo2cmPW1D/w8sNDLxbGBdj2C1yJiX38W+BjujG5i+nAGw==",
+        "resolved": "2.13.3",
+        "contentHash": "U57PBVE9+2aw2AuUKqJ+90PM+MdUR6dveq9gGok9AuY5DpuUOeQ+BUwJMb0uGY0mFQFqSZ5ZfMUsFE+di3fBZQ==",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.1",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "7.0.1",
           "Microsoft.Extensions.Http": "3.1.3",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "7.0.0",
           "Microsoft.Identity.Abstractions": "4.0.0",
-          "Microsoft.Identity.Web.Certificate": "2.13.1",
-          "Microsoft.Identity.Web.Certificateless": "2.13.1",
-          "Microsoft.Identity.Web.TokenCache": "2.13.1",
+          "Microsoft.Identity.Web.Certificate": "2.13.3",
+          "Microsoft.Identity.Web.Certificateless": "2.13.3",
+          "Microsoft.Identity.Web.TokenCache": "2.13.3",
           "Microsoft.IdentityModel.Logging": "6.32.0",
           "Microsoft.IdentityModel.LoggingExtensions": "6.32.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.32.0",
@@ -767,14 +767,14 @@
       },
       "Microsoft.Identity.Web.TokenCache": {
         "type": "Transitive",
-        "resolved": "2.13.1",
-        "contentHash": "0r2ntks4hYOfZQWtDCeiWKgMD+QlZS2j8MXt9zY/SqJhiG4vYEIUsYRhVGFlHoBUV+7Bvg4GxoYxzpnVrYUoLg==",
+        "resolved": "2.13.3",
+        "contentHash": "KwzfNus23ZGwhHcutM7EOZNcapu5EeR50wUic/sXjDOg+2twa8/4iLIE4RdTBKcPuUmeOq2o7RBfAMEcOR0HRA==",
         "dependencies": {
-          "Microsoft.AspNetCore.DataProtection": "7.0.9",
+          "Microsoft.AspNetCore.DataProtection": "7.0.10",
           "Microsoft.Extensions.Caching.Memory": "7.0.0",
           "Microsoft.Extensions.Logging": "7.0.0",
           "Microsoft.Identity.Client": "4.55.0",
-          "Microsoft.Identity.Web.Diagnostics": "2.13.1",
+          "Microsoft.Identity.Web.Diagnostics": "2.13.3",
           "System.Drawing.Common": "4.7.2",
           "System.Security.Cryptography.Pkcs": "7.0.2",
           "System.Security.Cryptography.Xml": "7.0.1",
@@ -882,8 +882,8 @@
       },
       "Microsoft.SemanticKernel.Abstractions": {
         "type": "Transitive",
-        "resolved": "0.19.230804.2-preview",
-        "contentHash": "if1NHkN3w0TaJCqU+ClROqoGhjljObDxdUb9SMpvxWg+Jd8bK2FsPAuqvLqSGfQPhiRRXAbWDPAHdT2Fom8vCA==",
+        "resolved": "0.20.230821.4-preview",
+        "contentHash": "5/HN2oSvtqEptKM+hhA4z6XtSOa5BMmxtSCcDtwrviZ05WClQoMwUUrhNnS8+5SV4BgWl0mN6mKYR/3NTASBkQ==",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
           "Microsoft.Bcl.HashCode": "1.1.0",
@@ -893,46 +893,46 @@
       },
       "Microsoft.SemanticKernel.Connectors.AI.OpenAI": {
         "type": "Transitive",
-        "resolved": "0.19.230804.2-preview",
-        "contentHash": "PnpH10esOCiyZaPM0k641Xv6cvSIT3u2Z0nBq5hQXxVXplwVjmjAqKECmjf86HtTWwDOcZgfFtGIGQpPUpwHcw==",
+        "resolved": "0.20.230821.4-preview",
+        "contentHash": "/qGPfYDi+pwXhvWLEDxQyRc5e06unqVCpfL8OKRflmORE1KwjgozqWMqO3S+nGmm69btmruhj724GoyIXBPDnA==",
         "dependencies": {
           "Azure.AI.OpenAI": "1.0.0-beta.6",
-          "Microsoft.SemanticKernel.Core": "0.19.230804.2-preview"
+          "Microsoft.SemanticKernel.Core": "0.20.230821.4-preview"
         }
       },
       "Microsoft.SemanticKernel.Core": {
         "type": "Transitive",
-        "resolved": "0.19.230804.2-preview",
-        "contentHash": "fCSAjxt4ex8Fd6bNPH1T1uaWzQOKqbuVQiBqkQ7bU/1lyfAgaRavTV1bwhA/oQgzL3wDyRO5ccbYljAPcVXddA==",
+        "resolved": "0.20.230821.4-preview",
+        "contentHash": "anJGlCq7jcQqZJBTrjpojBBNdW4BACkVknUDOCpvszbO4Zy0UO770FoHAJxeAnJ5YmBTnsdfW5qEcsKTy3sKAg==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Abstractions": "0.19.230804.2-preview",
+          "Microsoft.SemanticKernel.Abstractions": "0.20.230821.4-preview",
           "System.Diagnostics.DiagnosticSource": "7.0.2"
         }
       },
       "Microsoft.SemanticKernel.Planning.ActionPlanner": {
         "type": "Transitive",
-        "resolved": "0.19.230804.2-preview",
-        "contentHash": "x/NwZz+W13XLzxMhVTt+ExXaz6Rnl1VtS83hVkNQQC0RE0uRdQ+p7t7f/j16XVlIksEoTEMgSGoV4kqYsjsl2g==",
+        "resolved": "0.20.230821.4-preview",
+        "contentHash": "56joX+pgAcyYP5fboNZH2GdxJiC07Onp6Rj0CIPLjnTlNgHZy+2a1/SwP+LUExNBIQsaniEEn2lsIqYzj4SEzg==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Abstractions": "0.19.230804.2-preview",
-          "Microsoft.SemanticKernel.Core": "0.19.230804.2-preview"
+          "Microsoft.SemanticKernel.Abstractions": "0.20.230821.4-preview",
+          "Microsoft.SemanticKernel.Core": "0.20.230821.4-preview"
         }
       },
       "Microsoft.SemanticKernel.Planning.SequentialPlanner": {
         "type": "Transitive",
-        "resolved": "0.19.230804.2-preview",
-        "contentHash": "0BvQ8z0Eb3deKJwHrb7XNQ3ouP9ObwwMlkJEZGmFZvMt7Hc82rfO1ZPbosM2Bl0rxBzpEKetB7l+vxrHL50qXg==",
+        "resolved": "0.20.230821.4-preview",
+        "contentHash": "0EiSckLta3eLYFZQGczBCF0MJN5nvMRnwrRhhL9OAMSRmPiFGrmmKT8FjPK9Fy6r6aGJ1fe+xWQlS6Cg1eJctQ==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Abstractions": "0.19.230804.2-preview",
-          "Microsoft.SemanticKernel.Core": "0.19.230804.2-preview"
+          "Microsoft.SemanticKernel.Abstractions": "0.20.230821.4-preview",
+          "Microsoft.SemanticKernel.Core": "0.20.230821.4-preview"
         }
       },
       "Microsoft.SemanticKernel.Skills.Core": {
         "type": "Transitive",
-        "resolved": "0.19.230804.2-preview",
-        "contentHash": "GBFB7GWktSSd1KK5rLa2U79H5DOyUEKjkvvDAacmTU8SLYViW1Zhj9rZVuWhbzsY6sh+gbn0MSUEHKm18rQnrw==",
+        "resolved": "0.20.230821.4-preview",
+        "contentHash": "yFjG3S9OdXlytvIHJ1k+sjVhsNgf1yAIqMA+wVy+jwOiTE7SQLsgKvw6O24IFkC512BTUGQyeyMneoiorJfJgQ==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Core": "0.19.230804.2-preview"
+          "Microsoft.SemanticKernel.Core": "0.20.230821.4-preview"
         }
       },
       "Microsoft.Win32.Registry": {
