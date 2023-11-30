@@ -16,9 +16,6 @@ Welcome to the SKPlayground, your interactive playground to experiment with Micr
 - **Easily Adoptable Tech Stack:** Built with Next.js for the frontend and .NET 7 Minimal API for the backend.
 - **Extendability:** Can serve as an excellent starting point or inspiration for your own projects involving AI.
 
-> **Note**
-> An online demo environment is availabe at [skplayground.dev](https://skplayground.dev/)
-
 ![Screenshot](/screenshots/example-prompt.png)
 
 ![Screenshot](/screenshots/output-markdown.png)
